@@ -1,4 +1,3 @@
-  #  These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 its10am = [
   'https://youtu.be/75GFzikmRY0',
