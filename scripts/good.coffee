@@ -48,7 +48,7 @@ module.exports = (robot) ->
     res.send "You're welcome...I'm happy I'm able to help you achieve your PKM goals!"
 
 
-  robot.respond /hello/i, (res) ->
+  robot.respond /start demo/i, (res) ->
     res.send "Hi! I\'m CarolBot and I\'m here to help you manage your PKM (personal knowledge management) goals. Let\'s get started… go ahead and enter your first Web URL now."
 
 
