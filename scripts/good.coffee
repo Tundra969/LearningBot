@@ -64,6 +64,10 @@ module.exports = (robot) ->
     msg.send msg.random bam
 
 
+  robot.hear /(thumbsup)/i, (msg) ->
+    msg.send msg.random bam
+
+
   robot.respond /it's 2 pm/i, (res) ->
     res.send 'Did you review today\'s Growth Mindset link? (yes/no)'
 
