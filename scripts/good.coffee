@@ -68,7 +68,7 @@ module.exports = (robot) ->
     res.send "Hi! I\'m CarolBot and I\'m here to help you manage your PKM (personal knowledge management) goals. Let\'s get started… go ahead and enter your first Web URL now."
 
   robot.respond /it's 10 am/i, (msg) ->
-    msg.send 'Let\'s review this content from y`our Growth Mindset category today: ' +  msg.random its10am
+    msg.send 'Let\'s review this content from your Growth Mindset category today: ' +  msg.random its10am
 
   robot.respond /add/i, (msg) ->
      msg.send msg.random added
