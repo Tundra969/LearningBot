@@ -45,8 +45,8 @@ module.exports = (robot) ->
    'Got anymore for me… go ahead and enter it whenever you\'re ready.',
   ]
 
-  robot.hear /add/i, (msg) ->
-     msg.send msg.random added
+  robot.respond /add/i, (res) ->
+     res.send res.random added
 
   # bam = [
   #   'http://choiceschools.com/wp-content/uploads/2016/02/10-Growth-Mindset-Statements.jpg',
