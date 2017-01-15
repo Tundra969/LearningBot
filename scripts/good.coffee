@@ -9,7 +9,7 @@ module.exports = (robot) ->
     res.send "Hi! I’m LearningBot and I’m here to help you manage your PKM (personal knowledge management) goals. Let’s get started… go ahead and enter your first Web URL now."
 
 
-var its10am = [
+its10am = [
   "Let's review this content from your Growth Mindset category today:  https://youtu.be/75GFzikmRY0",
   "Let's review this content from your Growth Mindset category today:  https://youtu.be/5Nymq7IVFSE",
   "Let's review this content from your Growth Mindset category today:  https://youtu.be/muoVtDjjonM",
@@ -24,14 +24,14 @@ var its10am = [
   "Let's review this content from your Growth Mindset category today: https://youtu.be/X9KP8uiGZTs?list=PLKjipW9JnOVKI_hcuIYf-elXiXrSts9mS",
   "Let's review this content from your Growth Mindset category today: https://www.mindsetworks.com/science/",
   "Let's review this content from your Growth Mindset category today: https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
-  "Let's review this content from your Growth Mindset category today: http://trainugly.com/mindset/"
+  "Let's review this content from your Growth Mindset category today: http://trainugly.com/mindset/",
 ]
 
   robot.hear /it's 10 am/i, (msg) ->
     msg.send msg.random its10am
 
 
-var add = [
+add = [
   "I’ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you’re ready.",
   "You got it! Link saved!",
   "You're on a roll!",
@@ -40,7 +40,7 @@ var add = [
   "You're going to love this content!",
   "Got it! You're going to love this content!",
   "I’ve added your link to the Growth Mindset category.",
-  "Got anymore for me… go ahead and enter it whenever you’re ready."
+  "Got anymore for me… go ahead and enter it whenever you’re ready.",
 ]
 
   robot.hear /add/i, (msg) ->
