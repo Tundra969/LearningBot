@@ -1,32 +1,32 @@
   #  These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 its10am = [
-   'https://youtu.be/75GFzikmRY0',
-   'https://youtu.be/5Nymq7IVFSE',
-   'https://youtu.be/muoVtDjjonM',
-   'http://i.imgur.com/DPVM1.png',
-   'https://youtu.be/NWv1VdDeoRY',
-   'https://youtu.be/9jNErdBueQc',
-   'https://youtu.be/Yl9TVbAal5s',
-   'https://youtu.be/_X0mgOOSpLU',
+  'https://youtu.be/75GFzikmRY0',
+  'https://youtu.be/5Nymq7IVFSE',
+  'https://youtu.be/muoVtDjjonM',
+  'http://i.imgur.com/DPVM1.png',
+  'https://youtu.be/NWv1VdDeoRY',
+  'https://youtu.be/9jNErdBueQc',
+  'https://youtu.be/Yl9TVbAal5s',
+  'https://youtu.be/_X0mgOOSpLU',
   'https://www.youtube.com/watch?v=cVf38y07cfk&list=PLKjipW9JnOVKI_hcuIYf-elXiXrSts9mS&index=6',
-   'https://www.youtube.com/watch?v=bSycdIx-C48',
-   'https://www.youtube.com/watch?v=HVWbrNls-Kw',
-   'https://youtu.be/X9KP8uiGZTs?list=PLKjipW9JnOVKI_hcuIYf-elXiXrSts9mS',
-   'https://www.mindsetworks.com/science/',
-   'https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means',
-   'http://trainugly.com/mindset/',
+  'https://www.youtube.com/watch?v=bSycdIx-C48',
+  'https://www.youtube.com/watch?v=HVWbrNls-Kw',
+  'https://youtu.be/X9KP8uiGZTs?list=PLKjipW9JnOVKI_hcuIYf-elXiXrSts9mS',
+  'https://www.mindsetworks.com/science/',
+  'https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means',
+  'http://trainugly.com/mindset/',
 ]
 
 added = [
-   'I\'ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you\'re ready.',
-   'You got it! Link saved!',
-   'You\'re on a roll!',
-   'Got it!',
-   'Anything else?',
-   'You\'re going to love this content!',
-   'Got it! You\'re going to love this content!',
-   'I\'ve added your link to the Growth Mindset category.',
+  'I\'ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you\'re ready.',
+  'You got it! Link saved!',
+  'You\'re on a roll!',
+  'Got it!',
+  'Anything else?',
+  'You\'re going to love this content!',
+  'Got it! You\'re going to love this content!',
+  'I\'ve added your link to the Growth Mindset category.',
   'Got anymore for me… go ahead and enter it whenever you\'re ready.',
 ]
 
@@ -44,50 +44,44 @@ bam = [
 
 module.exports = (robot) ->
 
-  robot.hear /thank you/i, (res) ->
+  robot.respond /thank you/i, (res) ->
     res.send "You're welcome...I'm happy I'm able to help you achieve your PKM goals!"
 
 
-  robot.hear /hello/i, (res) ->
+  robot.respond /hello/i, (res) ->
     res.send "Hi! I\'m CarolBot and I\'m here to help you manage your PKM (personal knowledge management) goals. Let\'s get started… go ahead and enter your first Web URL now."
 
 
-  lulz = ['lol', 'rofl', 'lmao']
-
-  robot.respond /lulz/i, (res) ->
-    res.send res.random lulz
+  robot.respond /it's 10 am/i, (msg) ->
+    msg.send 'Let\'s review this content from y`our Growth Mindset category today: ' +  msg.random its10am
 
 
-  robot.hear /it's 10 am/i, (msg) ->
-    msg.send 'Let\'s review this content from your Growth Mindset category today: ' +  msg.random its10am
-
-
-  robot.respond /add/i, (res) ->
-     res.send res.random added
+  robot.respond /add/i, (msg) ->
+     msg.send msg.random added
 
 
   robot.hear /Bam!/i, (msg) ->
     msg.send msg.random bam
 
 
-  robot.hear /it's 2 pm/i, (res) ->
+  robot.respond /it's 2 pm/i, (res) ->
     res.send 'Did you review today\'s Growth Mindset link? (yes/no)'
 
 
-  robot.hear /yes/i, (res) ->
+  robot.respond /yes/i, (res) ->
     res.send 'Great job prioritizing your development today! Here are a few questions to reflect on what you learned:\n
 - How can you apply what you learned in the next 7 days?\n
-- How will you know if you are successful with this? What will you see/hear/feel?\n
+- How will you know if you are successful with this? What will you see/respond/feel?\n
 - Who else might be interested in this content?'
 
 
-  robot.hear /no/i, (res) ->
+  robot.respond /no/i, (res) ->
     res.send 'Is this still content you\'d like to review? (keep/delete)'
 
 
-  robot.hear /keep/i, (res) ->
+  robot.respond /keep/i, (res) ->
     res.send 'I\'ll add that back into your resource rotation and deliver it again later.'
 
 
-  robot.hear /delete/i, (res) ->
+  robot.respond /delete/i, (res) ->
     res.send 'Okay, I\'ll delete that resource for you.'
