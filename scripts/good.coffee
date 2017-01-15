@@ -97,7 +97,7 @@ module.exports = (robot) ->
   robot.respond /delete/i, (res) ->
     res.send 'Okay, I\'ll delete that resource for you.'
 
-  robot.respond /tell us about yourself/i, (res) ->
+  robot.respond /tell/i, (res) ->
     res.send "I'm CarolBot... I was developed using a Hubot library with HipChat integration.\n
 I am deployed on a Huroku server and have been added to my makers' HipChat team. \n
 I am available for coaching in a room or via personal chat."
