@@ -44,7 +44,7 @@ bam = [
 
 module.exports = (robot) ->
 
-  robot.respond /thank you/i, (res) ->
+  robot.respond /thank(s)/i, (res) ->
     res.send "You're welcome...I'm happy I'm able to help you achieve your PKM goals!"
 
 

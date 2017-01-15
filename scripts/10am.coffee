@@ -1,6 +1,4 @@
-# module.exports = (robot) ->
-#
-#   its10am = [
+# its10am = [
 #   "Let's review this content from your Growth Mindset category today:  https://youtu.be/75GFzikmRY0",
 #   "Let's review this content from your Growth Mindset category today:  https://youtu.be/5Nymq7IVFSE",
 #   "Let's review this content from your Growth Mindset category today:  https://youtu.be/muoVtDjjonM",
@@ -17,6 +15,8 @@
 #   "Let's review this content from your Growth Mindset category today: https://hbr.org/2016/01/what-having-a-growth-mindset-actually-means",
 #   "Let's review this content from your Growth Mindset category today: http://trainugly.com/mindset/",
 # ]
+#
+# module.exports = (robot) ->
 #
 #   robot.hear /it's 10 am/i, (msg) ->
 #     msg.send msg.random its10am
