@@ -1,4 +1,17 @@
   #  These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
+added = [
+   'I\'ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you\'re ready.',
+   'You got it! Link saved!',
+   'You\'re on a roll!',
+   'Got it!',
+   'Anything else?',
+   'You\'re going to love this content!',
+   'Got it! You\'re going to love this content!',
+   'I\'ve added your link to the Growth Mindset category.',
+  'Got anymore for me… go ahead and enter it whenever you\'re ready.',
+]
+
+
 module.exports = (robot) ->
 
   robot.hear /thank you/i, (res) ->
@@ -33,17 +46,7 @@ module.exports = (robot) ->
  #  robot.hear /it's 10 am/i, (msg) ->
  #    msg.send 'Let\'s review this content from your Growth Mindset category today: ' +  msg.random its10am
 
-  added = [
-    'I\'ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you\'re ready.',
-    'You got it! Link saved!',
-    'You\'re on a roll!',
-    'Got it!',
-    'Anything else?',
-    'You\'re going to love this content!',
-    'Got it! You\'re going to love this content!',
-    'I\'ve added your link to the Growth Mindset category.',
-   'Got anymore for me… go ahead and enter it whenever you\'re ready.',
-  ]
+
 
   robot.respond /add/i, (res) ->
      res.send res.random added
