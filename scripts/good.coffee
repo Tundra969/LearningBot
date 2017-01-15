@@ -42,35 +42,46 @@ bam = [
   'https://3.bp.blogspot.com/-Vk_rd9d1Z4s/V9lXAJUoX-I/AAAAAAAAKHY/SR95eMqeN_MJiO7aBXkAs702BktUEITMQCLcB/s640/Slide1.PNG',
 ]
 
+thank = [
+  'You\'re welcome...I\'m happy I\'m able to help you achieve your PKM goals!',
+  'Don\'t mention it.',
+  'Glad to help!',
+  'Of course... keep embracing the pain of learning!',
+  'You\'re welcome... remember learning is not just about the destination, it\'s about embracing the sometimes painful journey... keep going!',
+  'Of course... keep going!',
+  'You\'re welcome... slow and steady wins the race.',
+  'You\'re very welcome.',
+  'Don\'t mention it, I\'m happy to help!',
+  'Any time... especially every day at 10 and 2.',
+  'Yes, of course. I really admire your perseverance.',
+  'Of course. Remember, true growth is about persistence and not talent... keep going!',
+  'You\'re welcome! Make your life a masterpiece; imagine no limitation on what you can be, have or do. (Brian Tracy actually said that... not me.)',
+  'You\'re welcome.',
+  'Of course. You learn more from failure than from success. Don\'t let failure stop you. Failure builds character... keep building good character',
+]
+
 module.exports = (robot) ->
 
   robot.respond /thank*/i, (res) ->
-    res.send "You're welcome...I'm happy I'm able to help you achieve your PKM goals!"
-
+    res.send res.random thank
 
   robot.respond /start demo/i, (res) ->
     res.send "Hi! I\'m CarolBot and I\'m here to help you manage your PKM (personal knowledge management) goals. Let\'s get started… go ahead and enter your first Web URL now."
 
-
   robot.respond /it's 10 am/i, (msg) ->
     msg.send 'Let\'s review this content from y`our Growth Mindset category today: ' +  msg.random its10am
-
 
   robot.respond /add/i, (msg) ->
      msg.send msg.random added
 
-
   robot.hear /Bam!/i, (msg) ->
     msg.send msg.random bam
-
 
   robot.hear /(thumbsup)/i, (msg) ->
     msg.send msg.random bam
 
-
   robot.respond /it's 2 pm/i, (res) ->
     res.send 'Did you review today\'s Growth Mindset link? (yes/no)'
-
 
   robot.respond /yes/i, (res) ->
     res.send 'Great job prioritizing your development today! Here are a few questions to reflect on what you learned:\n
@@ -78,14 +89,11 @@ module.exports = (robot) ->
 - How will you know if you are successful with this? What will you see/respond/feel?\n
 - Who else might be interested in this content?'
 
-
   robot.respond /no/i, (res) ->
     res.send 'Is this still content you\'d like to review? (keep/delete)'
 
-
   robot.respond /keep/i, (res) ->
     res.send 'I\'ll add that back into your resource rotation and deliver it again later.'
-
 
   robot.respond /delete/i, (res) ->
     res.send 'Okay, I\'ll delete that resource for you.'

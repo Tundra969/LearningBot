@@ -1,7 +1,7 @@
 module.exports = (robot) ->
   robot.respond /(http(s?)\:\/\/\S+)/i, (msg) ->
     href = msg.match[1]
-  robot.respond /add (http(s?)\:\/\/\S+)/i, (res) ->
+  robot.respond /put (http(s?)\:\/\/\S+)/i, (res) ->
     urls = robot.brain.get('links') or []
     href = msg.match[1]
     urls.add href
