@@ -27,8 +27,8 @@ its10am = [
   "http://trainugly.com/mindset/",
 ]
 
-  robot.hear /it's 10 am/i, (msg) ->
-    msg.send msg.random "Let's review this content from your Growth Mindset category today: " + its10am;
+  robot.hear /it's 10 am/i, "Let's review this content from your Growth Mindset category today: " + (msg) ->
+    msg.send msg.random its10am
 
 
 
