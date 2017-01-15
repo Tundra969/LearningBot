@@ -33,20 +33,20 @@ module.exports = (robot) ->
  #   robot.hear /it's 10 am/i, (msg) ->
  #     msg.send 'Let\'s review this content from your Growth Mindset category today: ' +  msg.random its10am
 
-add = [
-   'I\'ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you\'re ready.',
-   'You got it! Link saved!',
-   'You\'re on a roll!',
-   'Got it!',
-   'Anything else?',
-   'You\'re going to love this content!',
-   'Got it! You\'re going to love this content!',
-   'I\'ve added your link to the Growth Mindset category.',
-   'Got anymore for me… go ahead and enter it whenever you\'re ready.',
- ]
-
-   robot.hear /add/i, (msg) ->
-     msg.send msg.random add
+# add = [
+#    'I\'ve added your link to the Growth Mindset category. Got anymore for me… go ahead and enter it whenever you\'re ready.',
+#    'You got it! Link saved!',
+#    'You\'re on a roll!',
+#    'Got it!',
+#    'Anything else?',
+#    'You\'re going to love this content!',
+#    'Got it! You\'re going to love this content!',
+#    'I\'ve added your link to the Growth Mindset category.',
+#    'Got anymore for me… go ahead and enter it whenever you\'re ready.',
+#  ]
+#
+#    robot.hear /add/i, (msg) ->
+#      msg.send msg.random add
 
 bam = [
     'http://choiceschools.com/wp-content/uploads/2016/02/10-Growth-Mindset-Statements.jpg',
