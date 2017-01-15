@@ -45,7 +45,6 @@ thank = [
   'You\'re welcome...I\'m happy I\'m able to help you achieve your PKM goals!',
   'Don\'t mention it.',
   'Glad to help!',
-  'Of course... keep embracing the pain of learning!',
   'You\'re welcome... remember learning is not just about the destination, it\'s about embracing the sometimes painful journey... keep going!',
   'Of course... keep going!',
   'You\'re welcome... slow and steady wins the race.',
