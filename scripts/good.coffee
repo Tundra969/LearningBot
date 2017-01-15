@@ -28,7 +28,7 @@ its10am = [
 ]
 
   robot.hear /it's 10 am/i, (msg) ->
-    msg.send msg.random its10am
+    msg.send msg.random "Let's review this content from your Growth Mindset category today: " + its10am;
 
 
 
