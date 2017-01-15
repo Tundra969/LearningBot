@@ -4,16 +4,16 @@ robot.respond /list links/i, (msg) ->
     robot.brain.data.urls.forEach(url) ->
         msg.send url
 
-robot.respond /(http(s?)\:\/\/\S+)/i, (msg) ->
-  href = msg.match[1]
-  url = new Url robot
-  url.add href, (err, message) ->
-
-    if err?
-      console.log "#{href} : #{err}"
-    msg.reply "What category"
-    robot.respond /(.*)/i, (msg) ->
-      bookmark = new Bookmark url msg
+# robot.respond /(http(s?)\:\/\/\S+)/i, (msg) ->
+#   href = msg.match[1]
+#   url = new Url robot
+#   url.add href, (err, message) ->
+#
+#     if err?
+#       console.log "#{href} : #{err}"
+#     msg.reply "What category"
+#     robot.respond /(.*)/i, (msg) ->
+#       bookmark = new Bookmark url msg
 
 class Url
   constructor: (robot) ->
