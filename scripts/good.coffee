@@ -22,9 +22,9 @@ module.exports = (robot) ->
 
 
   robot.hear /yes/i, (res) ->
-    res.send "Great job prioritizing your development today! Here are a few questions to reflect on what you learned:
-- How can you apply what you learned in the next 7 days?
-- How will you know if you are successful with this? What will you see/hear/feel?
+    res.send "Great job prioritizing your development today! Here are a few questions to reflect on what you learned:\n
+- How can you apply what you learned in the next 7 days?\n
+- How will you know if you are successful with this? What will you see/hear/feel?\n
 - Who else might be interested in this content?"
 
 
